@@ -70,9 +70,9 @@ Swagger: http://localhost:8001/docs
 ## Docker-запуск
 
 ```bash
-docker build -t friend-todo ./todo_service
-docker build -t friend-shorturl ./shortener_service
+docker build -t alexeymartynenko/todo-service ./todo_service
+docker build -t alexeymartynenko/shorturl-service ./shortener_service
 
-docker run -d -p 8000:80 -v todo_data:/app/data friend-todo
-docker run -d -p 8001:80 -v shorturl_data:/app/data friend-shorturl
+docker run -d -p 8000:80 -v todo_data_martynenko:/app/data alexeymartynenko/todo-service
+docker run -d -p 8001:80 -v shorturl_data_martynenko:/app/data alexeymartynenko/shorturl-service
 ```
