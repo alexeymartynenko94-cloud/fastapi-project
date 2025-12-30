@@ -1,4 +1,4 @@
-# FastAPI Microservices (Friend Version)
+# FastAPI Microservices
 
 Проект состоит из двух микросервисов:
 - ToDo-сервис для управления задачами
@@ -47,13 +47,15 @@ Swagger: http://localhost:8001/docs
 ### ToDo Service
 
 | Метод | URL | Описание |
-|-----|-----|----------|
-| POST | /tasks | Создать задачу |
-| GET | /tasks | Получить все задачи |
-| PUT | /tasks/{id} | Отметить выполненной |
-| DELETE | /tasks/{id} | Удалить задачу |
+|-----|-----|---------|
+| POST | `/items` | Создание задачи |
+| GET | `/items` | Получение всех задач |
+| GET | `/items/{item_id}` | Получение задачи по ID |
+| PUT | `/items/{item_id}` | Обновление задачи |
+| DELETE | `/items/{item_id}` | Удаление задачи |
 
 ---
+
 
 ### URL Shortener
 
@@ -65,7 +67,7 @@ Swagger: http://localhost:8001/docs
 
 ---
 
-## Docker-запуск (пример)
+## Docker-запуск
 
 ```bash
 docker build -t friend-todo ./todo_service
